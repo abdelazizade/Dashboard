@@ -16,6 +16,8 @@ import { LoaderComponent } from './components/loader/loader.component';
 import { HoverDirective } from './directives/hover.directive';
 import { userReducer } from './store/user.reducer';
 import { AsyncPipe } from '@angular/common';
+import { EffectsModule } from '@ngrx/effects';
+import { UserEffects } from './store/user.effects';
 
 const routes: Routes = [
   { path: '', redirectTo: 'users', pathMatch: 'full' },
@@ -39,6 +41,7 @@ const routes: Routes = [
     StoreModule.forRoot({
       usersState: userReducer,
     }),
+    EffectsModule.forRoot([UserEffects]),
     AsyncPipe,
   ],
   providers: [UserService],

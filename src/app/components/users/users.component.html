@@ -94,3 +94,100 @@
     </div>
   </div>
 </div>
+
+<!-- <div class="container mt-5 text-center">
+  <div class="header text-center mb-4 fs-3">
+    <h1>User List</h1>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <label for="id" class="form-label">Search by Id</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search by ID"
+          matInput
+          #searchInput
+        />
+        <div
+          *ngIf="!validInput && searchId !== ''"
+          class="text-danger mt-2 fs-4"
+        >
+          Please enter a valid ID between 1 and 12.
+        </div>
+      </div>
+    </div>
+    <div *ngIf="isLoading$ | async" class="mt-2">
+      <app-loader></app-loader>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div *ngIf="validInput">
+        <ul class="list-group">
+          <li
+            class="list-group-item"
+            *ngFor="let user of searchResults$ | async"
+            appHover="lightgreen"
+          >
+            <a
+              [routerLink]="['/users', user.id]"
+              class="text-decoration-none text-black-50 text-primary"
+            >
+              <div class="d-flex align-items-center fs-3">
+                <img
+                  [src]="user.avatar"
+                  alt="{{ user.first_name }} {{ user.last_name }}"
+                  class="rounded-circle me-3"
+                  style="width: 50px; height: 50px"
+                />
+                <span>{{ user.first_name }} {{ user.last_name }}</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="user-list mt-4">
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let user of users$ | async"
+        appHover="lightblue"
+      >
+        <a
+          [routerLink]="['/users', user.id]"
+          class="text-decoration-none text-black-50"
+        >
+          <div class="d-flex align-items-center">
+            <img
+              [src]="user.avatar"
+              alt="{{ user.first_name }} {{ user.last_name }}"
+              class="rounded-circle me-3"
+              style="width: 50px; height: 50px"
+            />
+            <span>{{ user.first_name }} {{ user.last_name }}</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+    <div class="pagination-controls mt-4 d-flex justify-content-between">
+      <button
+        class="btn btn-primary"
+        (click)="previousPage()"
+        [disabled]="(currentPage$ | async) === 1"
+      >
+        Previous
+      </button>
+      <button
+        class="btn btn-primary"
+        (click)="nextPage()"
+        [disabled]="(currentPage$ | async) === (totalPages$ | async)"
+      >
+        Next
+      </button>
+    </div>
+  </div>
+</div> -->

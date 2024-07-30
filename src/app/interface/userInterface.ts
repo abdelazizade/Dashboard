@@ -1,21 +1,23 @@
+export interface UserState {
+  users: User[];
+  searchResults: User[];
+  currentPage: number;
+  totalPages: number;
+  loading: boolean;
+  error: any;
+}
+export interface UsersData {
+  data: User[];
+  page: number;
+  total_pages: number;
+}
+
 export interface User {
   id: number;
   email: string;
   first_name: string;
   last_name: string;
   avatar: string;
-}
-
-export interface ApiResponse {
-  data: User[];
-  page: number;
-  per_page: number;
-  total: number;
-  total_pages: number;
-  support: {
-    url: string;
-    text: string;
-  };
 }
 
 export interface UserDetails {
